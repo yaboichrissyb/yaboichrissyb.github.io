@@ -35,7 +35,30 @@ This all may sound overly complex, especially without practical examples.  But y
         **How does git help you keep track of changes?**
 
 Git helps you keep track of changes by allowing you to save edits as a bundle in something called a commit.  Each time you start working on a project, you can create a new branch off of the master.  This branch functions essentially as an alternate version of the original.  It is a copy that can be altered without damaging the original, but when the time comes, it can easily be merged back into the original file with all new changes intact.  To create new branch use the following command in your command line:
+
 git checkout -b "NEW-BRANCH-NAME"
+
+This command creates and navigates to your new branch.  From your new branch, you can add the existing project file you will be working on or create an entirely new one.  To add an existing file simply type:
+
+git add "file-name"
+
+From here you can go to your text editor and work on your file.  When you feel like you have made a substantial change, save and go back to your command line.  You will want to commit these changes to git.  You do this with the following command:
+
+git commit -m "commit description"
+
+Make sure to include a detailed anough description so it is clear to you and any others involved in the project what merging this commit will do to the final product.  It is best-practice to write in the active tense and not the past ("Add header" instead of "Added header").
+
+After you've committed your change, you can check the status of your project using the following command:
+
+git status
+
+This will give you some command line readout that will tell you how many files have been changed recently and whether the file is staged to be committed or not staged for commit.  Before you merge the file into your master branch, you always want to make sure your commits are up to date.
+
+When they're up to date, you can merge your branch with the master by typing the following command:
+
+git merge master
+
+Now your master branch is up to date with the new changes you've made and you're ready to push the new feature branch into your remote fork repository.
     </p>
     <p>
         Kazaa meevee eduvant gsnap movity kosmix kazaa klout jumo, trulia unigo groupon wakoopa spock knewton glogster heroku oooj, ning imvu appjet eskobo zillow twitter rovio. Glogster chegg voxy greplin dopplr voki foodzie xobni weebly odeo, sococo zynga knewton loopt palantir lala blyve tumblr blekko, twones akismet plaxo kippt meebo zillow zooomr insala. Oovoo imeem napster divvyshot zinch imeem voxy shopify, fleck kazaa zinch lanyrd boxbe joost wakoopa nuvvo, orkut elgg heekya sifteo scribd napster. Yammer yoono groupon dopplr cloudera nuvvo eduvant klout, voxy groupon disqus eduvant oooj greplin.
