@@ -1,0 +1,37 @@
+* {
+  background-color:#ffffff;
+  color:black;
+  font-family:helvetica;
+}
+header {
+  position:fixed;
+  width:100%;
+  top:0px;
+  height:auto;
+  border-bottom: 2px solid black;
+  display:block;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+header a {
+  text-decoration: none;
+  margin:0px auto 0px 10px;
+  color:black;
+}
+header a:hover {
+  font-weight: bold;
+  color:#2E4DE4;
+  text-decoration: none;
+}
+#Name {
+  float:right;
+  margin:0px 25px 0px auto;
+  font-size:20px;
+  color:#2E4DE4;
+}
+#C {
+  font-weight: bold;
+}
+#B {
+   font-weight: bold;
+   }
