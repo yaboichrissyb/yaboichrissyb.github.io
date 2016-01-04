@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type ="text/css" href="blog-default2.css">
+    <link rel="stylesheet" type ="text/css" href="stylesheets/blog-default2.css">
     <meta charset="utf-8">
       <title>Chris Bunkers</title>
   </head>
@@ -9,17 +9,97 @@
     <header>
       <a href="http://yaboichrissyb.github.io/">About</a>
       <a href="https://www.google.com/?gws_rd=ssl">Projects</a>
-      <a href="http://yaboichrissyb.github.io/blog:index.html">Blog</a>
+      <a href="hhttps://github.com/yaboichrissyb/yaboichrissyb.github.io.git">Blog</a>
       <span id="Name"><span id="C">C</span>hris <span id="B">B</span>unkers</span>
     </header>
   <div id="left">
      <p>Blog Archive</p>
      <ul>
-      <li><a href="http://yaboichrissyb.github.io/blog:index.html">Dec. 4</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/arrays-hashes.html">Jan. 3</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/css-concepts.html">Dec. 20</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/git.html">Dec. 4</a></li>
       </ul>
   </div>
 
   <div id="content">
+<article>
+  <h2><b>Week 4: Arrays and Hashes</b></h2>
+      <h5>Jan. 3, 2016</h5>
+
+      <p>Arrays and hashes are popular data structures used in Ruby, as well as C and Java, for storing all types of data.  You can use arrays, often in conjunction with hashes, to build and use complex data structures without having to define custom classes.</p>
+
+      <h4>Arrays</h4>
+      <p>From Ruby-Docs:
+
+        <pre>Arrays are ordered, integer-indexed collections of any object. Array indexing starts at 0, as in C or Java. A negative index is assumed to be relative to the end of the array—that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on</pre>
+
+      So, more basically, an array is a list of objects - strings, fixnums, floats, integers, other arrays, methods, etc. - that is stored and indexed for reference throughout the code.  What Ruby-Docs means by saying that an array is "integer-indexed" is that each object in the list can be referenced only with an integer.  For example, if you have an array called my_array and you wanted to access the first object, you would call my_array[0].  For the second object, you'd use my_array[1], and so on.
+      </p>
+      <h4>Hashes</h4>
+      <p>From Ruby-Docs:
+
+        <pre>A Hash is a collection of key-value pairs.  It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.  Hashes enumerate their valies in the order that the corresponding keys were insterted.</pre>
+
+      This definition is more self-explanatory.  Both arrays and hashes are data-indexing structures but the method in which they index the data is different.  Arrays only use numbers, starting from 0, while hashes allow the programmer to define arbitrary keys with which to call the value at any point in the code.  Like arrays, hashes can store all types of objects, from strings and integers to other arrays, methods and floats.</p>
+
+      <h4>One more time: What's the difference?</h4>
+      <p>With arrays, you absolutely have to use numbers to 'index' into the array, meaning you always use numbers, starting at 0, to find out what's in the array.  Hashes, on the other hand, let you use anything, not just numbers, as your index.  Each of the two data structures associate one thing to another, they just do it in diferent ways.  Arrays automatically link integers with the objects entered into the array, according to the order in which they are entered.  This is sometimes described as giving the objects in the array "implied keys".  Hashes give the programmer the freedom to define their own index keys.  The reasons why this might be useful will (hopefully) become more apparent as we begin to look at some examples.</p>
+
+      <h4>Example: Alphabet Array</h4>
+      <p>Let's say you want to create a data structure that has every letter in the alphabet.  You'd probably want to use an array for this.  Since you only have one type of variable in the list, you can take advantage of the implied array key.  This array could be useful, I can't think of a reason why, at the moment, but I'm sure there's a use for it.  You can define it simply, as follows:
+        <pre>
+          >> Alphabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
+          #Then you can access any letter:
+          >> Alphabet[0]
+          => a
+          >> Alphabet[7]
+          => h
+          >> Alphabet[25]
+          => z
+          >> Alphabet[100]
+          => nil
+        </pre>
+
+     <h4>Example: Favorite Things Hash</h4>
+     <p> Now, let's say you want to create a hash that has different categories of objects and then a user's favorite of that category.  You could define that hash as follows:
+      <pre>
+        favorite_things = {
+        'food' => 'Avocado',
+        'sport' => 'curling',
+        'city' => 'Juno, Alaska',
+        'color' => 'Chartruse',
+        'composer' => 'John Philip Sousa',
+        'age' => 300
+        }
+        #Now, to call any object in the hash, use the key
+        # you've defined:
+        >> favorite_things[:city]
+        => 'Juno, Alaska'
+        >> favorite_things[:age]
+        => 300
+      </pre>
+      With both arrays and hashes, various methods can be called to manipulate the data within the structure.  You can sort the data variously, add to it, delete from it, index only certain parts to be transformed with methods, turn numbers to strings and vice versa, etc.  The limits of what can be done are only the limits of your creativity.
+
+       <h2><b>Week 3: Positioning Elements in CSS</b></h2>
+      <h5>Dec. 20, 2015</h5>
+      <p>Trying to successfully position HTML elements with CSS was consistently the most frustrating task of this past week's DBC workload.  Therefore, I thought I'd take the opportunity in my technical blog to do some further research and, more importantly, deeper thinking to try to wrap my head around the position property and how exactly to make it work for me rather than against me.  First off, let's flesh out some basic definitions so we're all on the same page.</p>
+      <p>CSS is used for styling, formatting and positioning various HTML elements on a web page.  CSS takes the content from HTML and manipulates it or, from another viewpoint, adds a further layer of information for the browser to interpret.  The level at which CSS works is the HTML element, which CSS selects using selectors, that are then in turn manipulated using properties and their array of values.</p>
+      <p>Every single element on a web page is a block.  This literally means that it is a rectangle of pixels.  This becomes easier to understand when you set the element display: block.  From here you can easily set the height and width of that element.  But, elements that are set to display:inline or inline-block are also rectangles, they just flow into the page differently, lining up horizontally as they are able.  Positioning is used to the blocks of pixels exactly where you want them in relation to each other and the web page as a whole.</p>
+      There are four position values:
+
+      <i>position: static</i>
+      <i>position: relative</i>
+      <i>position: absolute</i>
+      <i>position: fixed</i>
+
+      <p><b>Static:</b> This is the default value for every single element.  It means that the element will simply flow into the page as it normally would as dictated by the HTML hierarchy.  Different elements don't have different default positioning values, they all start out as static unless altered by some element outside of your control.  The only time you would really need to enter a position:static value is to forcefully remove some positioning that got applied from another element. This is fairly rare since positioning doesn't cascade.</p>
+      <p><b>Relative:</b> This type of positioning is probably the most confusing and most often misused.  It sounds like it would mean relative to other elements or possibly even a parent element, but what it really means is relative to itself.  If you set position:relative to an element but no other positioning properties/values (top/bottom/left/right), it will have no effect at all.  It will be exactly as it would be if you left it as position:static.  But if you do give it some other positioning attributes, such as top:10px, it will shift its position 10 pixels down from where it would normally be.  Once you understand what the 'relative' of relative positioning actually speaks to, you can understand that it's a fairly straightforward and useful concept to understand.</p>
+      <p><b>Absolute:</b> This is another very powerful type of position.  It allows you to literally place any page elment exactly where you want it, regardless of the order in which your elements appear in your HTML file.  You can use the positioning attributes top/bottom/left/right to set the location.  These values will, by default, be relative to the next parent element with relative or absolute positioning.  If there aren't any parent elements it will default all the way up to the <html> element, which will then have you positioning your element absolutely relative to the entire page itself.  The most important thing to remember about absolute positioining is that absolutely positioned elements are removed from the regular flow of elements on the page.  An element with this type of positioining is not affected by other lements and it doesn't affect other elements.  This is a serious thing to consider when using absolute positioing as its overuse or improper use can limit the overall felxibility of your site design. </p>
+      <p><b>Fixed:</b>This type of positioning is fairly rare but has its uses.  In fact, I found myself using fixed positioning a fair amount in designing my home and blog pages, though not without a good deal of frustration.  A fixed element is positioned relative to the viewport, or the browser window itself.  The viewport doesn't change when the window is scrolled, so a fixed positioned element will stay right where it is when the page is scrolled.  This can be useful for headers or navigation bars; elements that you as the site designer always want available to your user, even if they are scrolling down a long article page.  One potentially bad trait of fixed positioning is that it becomes more difficult to translate across mobile platforms and different browsers.  It generally has a cool effect and can be useful but needs to be thoroughly tested across platforms.
+
+      <p> So, while reading about this sort of stuff can be useful if you've already had the frustrating experience of trying to figure out how best to use these four positioning properties, sometimes the best way to become more familiar with them is to practice and see them work first-hand.  I've found it useful to go back and review the content from our 3.4 pairing session to get more practice positioning blocks.  I also found <a href ="http://www.barelyfitz.com/screencast/html-training/css/positioning/">this</a> tutorial very helpful.</p>
+    </article>
+
     <article>
       <h2><b>Week 1: The Command Line and Version Control</b></h2>
       <h5>Dec. 4, 2015</h5>
@@ -27,10 +107,10 @@
       <p>Version Control is the name given to a group of tools that allow developers (and non-developers, poets, writers, etc.) to track the progress of their work and create backups.  The specific tool we have and will be using in DBC is called git.  Git is a local piece of software that sits on your computer and works in conjunction with your command line.  In order to use it, simply type "git ..." followed by a variety of commands.  Another tool that then works in conjunction with git (which is working in conjunction with your home terminal) is called GitHub.  GitHub is used as a remote component to the local git software and allows users to upload, store, and share their version control output.  GitHub also functions as a significant part of the open-source community.</p>
       <p>Developers use git and GitHub in their working process for a variety of reasons.  To start, let's consider what the process of creating code actually looks like.  The basic workflow of the developer generally goes as follows:</p>
 
-      <p><i>1. you create things (code)</p>
-      <p>2. you save things</p>
-      <p>3. you edit things</p>
-      <p>4. you save things again</i></p>
+      <p><i>1. you create things (code)</i></p>
+      <p><i>2. you save things</i></p>
+      <p><i>3. you edit things</i></p>
+      <p><i>4. you save things again</i></p>
 
       <p>This last part is where version control comes most in handy.  Git gives you a clear sense as to when, why, and exactly what you did in each group of edits.  Optimally, each time you save your project, you also go to your command line and create a commit.  A commit is essentially a bundle of changes that are grouped together and labeled/described as a sort of checkpoint in the process of creating your something beautiful.</p>
       <p>Tracking changes might not seem like such a difficult thing to do on an individual basis, but it can become quite confusing/complex when you're juggling multiple projects, project components, or collaborating with a partner or team on the same project.  You need to be able to track who did exactly what, why and when.</p>
@@ -63,8 +143,9 @@
       <h4>Why use GitHub to store your code?</h4>
       <p>GitHub is useful for a number of reasons.  You can create online repositories to store your code remotely.  This means that if something happens to your local version of a code, you can always restore it from the remote version.  GitHub allows you to work locally while keeping a remote backup.</p>
       <p>Probably more importantly though, storing code remotely allows you to share it more easily with others, whether they're a third party simply interested in learning how you created something, or they're directly part of your development team and need access to current or developing versions of a project.</p>
-      <p>GitHub allows people to work simultaneously on a project without interfering with each other or damaging the original code by creating and cloning forks of the original author's work.  This creates an environment optimal for collaboration where each individual is able to alter or add to code however they see fit and, when they create something that amounts to an improvement, as deemed by team consensus or original author permission, this change can be pushed and then pulled back into the original source code with the author or administrator's permission.</p>
+      <p>GitHub allows people to work simultaneously on a project without interfering with each other or damaging the original code by creating and cloning forks of the original author's work.  This creates an environment optimal for collaboration where each individual is able to alter or add to code however they see fit and, when they create something that amounts to an improvement, as deemed by team consensus or original author permission, this change can be pushed and then pulled back into the original source code with the author or administrator's permission.</p></article>
     </div>
     <footer>Site created by <span>Chris Bunkers</span> - &COPY 2015</footer>
   </body>
 </html>
+Status API Training Shop Blog About Pricing
