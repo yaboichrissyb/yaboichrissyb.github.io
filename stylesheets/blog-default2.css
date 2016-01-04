@@ -1,10 +1,9 @@
 * {
-  margin:0;
+  background-color:#ffffff;
   color:black;
   font-family:helvetica;
 }
 header {
-  background-color: white;
   position:fixed;
   width:100%;
   top:0px;
@@ -32,39 +31,7 @@ header a:hover {
 }
 #C {
   font-weight: bold;
-  color:black;
 }
 #B {
    font-weight: bold;
-   color:black;
    }
-#left {
-background-color:#e6e6e6;
-float:left;
-position:fixed;
-width:100px;
-height:100%;
-margin-top: 10px;
-border-right: 2px solid black;
-padding: 30px 0 0 10px;
-}
-#left a {
-  text-decoration: none;
-}
-#left a:hover {
-font-weight: bold;
-color:#2E4DE4;
-}
-#content {
-  margin: 15px 10px 0 135px;
-  white-space: pre-line;
-}
-footer {
-  text-align: center;
-  margin:10px auto 10px auto;
-  color:gray;
-}
-footer span {
-  font-weight: bold;
-  color:gray;
-}

@@ -1,72 +1,74 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type ="text/css" href="../stylesheets/blog-default2.css">
-    <meta charset="utf-8">
-      <title>Chris Bunkers</title>
-  </head>
-  <body>
-    <header>
-      <a href="http://yaboichrissyb.github.io/">About</a>
-      <a href="https://www.google.com/?gws_rd=ssl">Projects</a>
-      <a href="hhttps://github.com/yaboichrissyb/yaboichrissyb.github.io.git">Blog</a>
-      <span id="Name"><span id="C">C</span>hris <span id="B">B</span>unkers</span>
-    </header>
-  <div id="left">
-    <p>Blog Archive</p>
-     <ul>
-      <li><a href="http://yaboichrissyb.github.io/blog/git.html">Dec. 4</a></li>
-      <li><a href="http://yaboichrissyb.github.io/blog/css-concepts.html">Dec. 20</a></li>
-      </ul>
-      </ul>
-  </div>
+<head>
+  <title>YABOICHRISSYB</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
+</head>
 
-  <div id="content">
-    <article>
-      <h2><b>Week 1: The Command Line and Version Control</b></h2>
-      <h5>Dec. 4, 2015</h5>
-      <h4>The Benefits of Version Control</h4>
-      <p>Version Control is the name given to a group of tools that allow developers (and non-developers, poets, writers, etc.) to track the progress of their work and create backups.  The specific tool we have and will be using in DBC is called git.  Git is a local piece of software that sits on your computer and works in conjunction with your command line.  In order to use it, simply type "git ..." followed by a variety of commands.  Another tool that then works in conjunction with git (which is working in conjunction with your home terminal) is called GitHub.  GitHub is used as a remote component to the local git software and allows users to upload, store, and share their version control output.  GitHub also functions as a significant part of the open-source community.</p>
-      <p>Developers use git and GitHub in their working process for a variety of reasons.  To start, let's consider what the process of creating code actually looks like.  The basic workflow of the developer generally goes as follows:</p>
+<main>
+  <h1>Week 1</h1>
+  <h2>The Command Line and Version Control</h2>
+  <h4>Dec. 4, 2015</h4>
 
-      <p><i>1. you create things (code)</i></p>
-      <p><i>2. you save things</i></p>
-      <p><i>3. you edit things</i></p>
-      <p><i>4. you save things again</i></p>
+  <section>
+    <p>
 
-      <p>This last part is where version control comes most in handy.  Git gives you a clear sense as to when, why, and exactly what you did in each group of edits.  Optimally, each time you save your project, you also go to your command line and create a commit.  A commit is essentially a bundle of changes that are grouped together and labeled/described as a sort of checkpoint in the process of creating your something beautiful.</p>
-      <p>Tracking changes might not seem like such a difficult thing to do on an individual basis, but it can become quite confusing/complex when you're juggling multiple projects, project components, or collaborating with a partner or team on the same project.  You need to be able to track who did exactly what, why and when.</p>
-      <p>This is generally done by forking directories of files off one GitHub account or group and then cloning them to your local computer.  From here, you can create a branch to edit or add to the source code, saving changes along the way in 'commits' with detailed descriptions.  When you are ready to add your edited or new component part to the group project whole, you can check your git status then merge your new branch back into the master. From here, you can then push it to the GitHub repository and you, or whoever has administrative control, can pull this series of commits and merge it into the remote master.
-      This all may sound overly complex, especially without practical examples.  But you can think of version control as saving checkpoints in a video game with multiple save files or as the "Google Docs" for developers.  It allows individuals or teams to collaborate in real time without stepping on each others' toes or damaging the source code.</p>
-      <h4>How does git help you keep track of changes?</h4>
-      <p>Git helps you keep track of changes by allowing you to save edits as a bundle in something called a commit.  Each time you start working on a project, you can create a new branch off of the master.  This branch functions essentially as an alternate version of the original.  It is a copy that can be altered without damaging the original, but when the time comes, it can easily be merged back into the original file with all new changes intact.  To create new branch use the following command in your command line:</p>
+      <b>The Benefits of Version Control</b></p>
 
-      <i> git checkout -b "NEW-BRANCH-NAME" </i>
+<p>Version Control is the name given to a group of tools that allow developers (and non-developers, poets, writers, etc.) to track the progress of their work and create backups.  The specific tool we have and will be using in DBC is called git.  Git is a local piece of software that sits on your computer and works in conjunction with your command line.  In order to use it, simply type "git ..." followed by a variety of commands.  Another tool that then works in conjunction with git (which is working in conjunction with your home terminal) is called GitHub.  GitHub is used as a remote component to the local git software and allows users to upload, store, and share their version control output.  GitHub also functions as a significant part of the open-source community.</p>
 
-      <p>This command creates and navigates to your new branch.  From your new branch, you can add the existing project file you will be working on or create an entirely new one.  To add an existing file simply type:</p>
+<p>Developers use git and GitHub in their working process for a variety of reasons.  To start, let's consider what the process of creating code actually looks like.  The basic workflow of the developer generally goes as follows:</p>
 
-      <i> git add "file-name" </i>
+<p><i>you create things (code)</p>
+<p>you save things</p>
+<p>you edit things</p>
+<p>you save things again</i></p>
 
-      <p>From here you can go to your text editor and work on your file.  When you feel like you have made a substantial change, save and go back to your command line.  You will want to commit these changes to git.  You do this with the following command:</p>
+<p>This last part is where version control comes most in handy.  Git gives you a clear sense as to when, why, and exactly what you did in each group of edits.  Optimally, each time you save your project, you also go to your command line and create a commit.  A commit is essentially a bundle of changes that are grouped together and labeled/described as a sort of checkpoint in the process of creating your something beautiful.</p>
 
-      <i> git commit -m "commit description" </i>
+<p>Tracking changes might not seem like such a difficult thing to do on an individual basis, but it can become quite confusing/complex when you're juggling multiple projects, project components, or collaborating with a partner or team on the same project.  You need to be able to track who did exactly what, why and when.</p>
 
-      <p>Make sure to include a detailed anough description so it is clear to you and any others involved in the project what merging this commit will do to the final product.  It is best-practice to write in the active tense and not the past ("Add header" instead of "Added header").</p>
-      <p>After you've committed your change, you can check the status of your project using the following command:</p>
+<p>This is generally done by forking directories of files off one GitHub account or group and then cloning them to your local computer.  From here, you can create a branch to edit or add to the source code, saving changes along the way in 'commits' with detailed descriptions.  When you are ready to add your edited or new component part to the group project whole, you can check your git status then merge your new branch back into the master. From here, you can then push it to the GitHub repository and you, or whoever has administrative control, can pull this series of commits and merge it into the remote master.
+This all may sound overly complex, especially without practical examples.  But you can think of version control as saving checkpoints in a video game with multiple save files or as the "Google Docs" for developers.  It allows individuals or teams to collaborate in real time without stepping on each others' toes or damaging the source code.
+    </p>
+    <p>
+        <b>How does git help you keep track of changes?</b>
 
-      <i> git status </i>
+<p>Git helps you keep track of changes by allowing you to save edits as a bundle in something called a commit.  Each time you start working on a project, you can create a new branch off of the master.  This branch functions essentially as an alternate version of the original.  It is a copy that can be altered without damaging the original, but when the time comes, it can easily be merged back into the original file with all new changes intact.  To create new branch use the following command in your command line:</p>
 
-      <p>This will give you some command line readout that will tell you how many files have been changed recently and whether the file is staged to be committed or not staged for commit.  Before you merge the file into your master branch, you always want to make sure your commits are up to date.</p>
-      <p>When they're up to date, you can merge your branch with the master by typing the following command:</p>
+<i> git checkout -b "NEW-BRANCH-NAME" </i>
 
-      <i> git merge master </i>
+<p>This command creates and navigates to your new branch.  From your new branch, you can add the existing project file you will be working on or create an entirely new one.  To add an existing file simply type:</p>
 
-      <p>Now your master branch is up to date with the new changes you've made and you're ready to push the new feature branch into your remote fork repository.</p>
-      <h4>Why use GitHub to store your code?</h4>
-      <p>GitHub is useful for a number of reasons.  You can create online repositories to store your code remotely.  This means that if something happens to your local version of a code, you can always restore it from the remote version.  GitHub allows you to work locally while keeping a remote backup.</p>
-      <p>Probably more importantly though, storing code remotely allows you to share it more easily with others, whether they're a third party simply interested in learning how you created something, or they're directly part of your development team and need access to current or developing versions of a project.</p>
-      <p>GitHub allows people to work simultaneously on a project without interfering with each other or damaging the original code by creating and cloning forks of the original author's work.  This creates an environment optimal for collaboration where each individual is able to alter or add to code however they see fit and, when they create something that amounts to an improvement, as deemed by team consensus or original author permission, this change can be pushed and then pulled back into the original source code with the author or administrator's permission.</p></article>
-    </div>
-    <footer>Site created by <span>Chris Bunkers</span> - &COPY 2015</footer>
-  </body>
-</html>
+<i> git add "file-name" </i>
+
+<p>From here you can go to your text editor and work on your file.  When you feel like you have made a substantial change, save and go back to your command line.  You will want to commit these changes to git.  You do this with the following command:</p>
+
+<i> git commit -m "commit description" </i>
+
+<p>Make sure to include a detailed anough description so it is clear to you and any others involved in the project what merging this commit will do to the final product.  It is best-practice to write in the active tense and not the past ("Add header" instead of "Added header").</p>
+
+<p>After you've committed your change, you can check the status of your project using the following command:</p>
+
+<i> git status </i>
+
+<p>This will give you some command line readout that will tell you how many files have been changed recently and whether the file is staged to be committed or not staged for commit.  Before you merge the file into your master branch, you always want to make sure your commits are up to date.</p>
+
+<p>When they're up to date, you can merge your branch with the master by typing the following command:</p>
+
+<i> git merge master </i>
+
+<p>Now your master branch is up to date with the new changes you've made and you're ready to push the new feature branch into your remote fork repository.
+    </p>
+    <p>
+        <b>Why use GitHub to store your code?</b>
+
+<p>GitHub is useful for a number of reasons.  You can create online repositories to store your code remotely.  This means that if something happens to your local version of a code, you can always restore it from the remote version.  GitHub allows you to work locally while keeping a remote backup.</p>
+
+<p>Probably more importantly though, storing code remotely allows you to share it more easily with others, whether they're a third party simply interested in learning how you created something, or they're directly part of your development team and need access to current or developing versions of a project.</p>
+
+<p>GitHub allows people to work simultaneously on a project without interfering with each other or damaging the original code by creating and cloning forks of the original author's work.  This creates an environment optimal for collaboration where each individual is able to alter or add to code however they see fit and, when they create something that amounts to an improvement, as deemed by team consensus or original author permission, this change can be pushed and then pulled back into the original source code with the author or administrator's permission.
+    </p>
+
+  </section>
+</main>
