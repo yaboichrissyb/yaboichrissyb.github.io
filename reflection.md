@@ -1,4 +1,4 @@
-
+<!--
 link: yaboichrissyb.github.io
 
 What did you learn about CSS padding, borders, and margin by doing this challenge?
@@ -17,3 +17,6 @@ What did you learn about adding and formatting elements with CSS in this challen
 
 I do feel like I have a deeper understanding of the relationship between html and css.  When you're adding elements you have to do this in HTML, but then you need to check you stylesheet to make sure you've selected all the relevant/appropriate properties correctly and in the right hierarcy.  It's very important to keep boths pages clean, organized, and linked correctly, otherwise your style and formatting choices won't translate properly.
 
+
+
+ -->
