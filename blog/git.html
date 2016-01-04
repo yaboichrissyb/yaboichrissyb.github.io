@@ -19,9 +19,7 @@
       <li><a href="http://yaboichrissyb.github.io/blog/css-concepts.html">Dec. 20</a></li>
       <li><a href="http://yaboichrissyb.github.io/blog/git.html">Dec. 4</a></li>
       </ul>
-      </ul>
   </div>
-
   <div id="content">
     <article>
       <h2><b>Week 1: The Command Line and Version Control</b></h2>
@@ -47,14 +45,25 @@
       <i> git add "file-name" </i>
 
       <p>From here you can go to your text editor and work on your file.  When you feel like you have made a substantial change, save and go back to your command line.  You will want to commit these changes to git.  You do this with the following command:</p>
+
+      <i> git checkout -b "NEW-BRANCH-NAME" </i>
+
+      <p>This command creates and navigates to your new branch.  From your new branch, you can add the existing project file you will be working on or create an entirely new one.  To add an existing file simply type:</p>
+
+      <i> git add "file-name" </i>
+
+      <p>From here you can go to your text editor and work on your file.  When you feel like you have made a substantial change, save and go back to your command line.  You will want to commit these changes to git.  You do this with the following command:</p>
+
       <i> git commit -m "commit description" </i>
 
       <p>Make sure to include a detailed anough description so it is clear to you and any others involved in the project what merging this commit will do to the final product.  It is best-practice to write in the active tense and not the past ("Add header" instead of "Added header").</p>
       <p>After you've committed your change, you can check the status of your project using the following command:</p>
+
       <i> git status </i>
 
       <p>This will give you some command line readout that will tell you how many files have been changed recently and whether the file is staged to be committed or not staged for commit.  Before you merge the file into your master branch, you always want to make sure your commits are up to date.</p>
       <p>When they're up to date, you can merge your branch with the master by typing the following command:</p>
+
       <i> git merge master </i>
 
       <p>Now your master branch is up to date with the new changes you've made and you're ready to push the new feature branch into your remote fork repository.</p>

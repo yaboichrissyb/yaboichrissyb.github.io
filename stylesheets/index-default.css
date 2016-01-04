@@ -1,0 +1,98 @@
+* {
+  background-color:#ffffff;
+  color:black;
+  font-family:helvetica;
+}
+header {
+  background-color: white;
+  position:fixed;
+  width:100%;
+  top:0px;
+  height:auto;
+  border-bottom: 2px solid black;
+  display:block;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+header a {
+  text-decoration: none;
+  margin:0px auto 0px 10px;
+  color:black;
+}
+header a:hover {
+  font-weight: bold;
+  color:#2E4DE4;
+  text-decoration: none;
+}
+#Name {
+  float:right;
+  margin:0px 25px 0px auto;
+  font-size:20px;
+  color:#2E4DE4;
+}
+#C {
+  font-weight: bold;
+  color:black;
+}
+#B {
+   font-weight: bold;
+   color:black;
+   }
+#left {
+background-color:#e6e6e6;
+float:left;
+position:fixed;
+width:12%;
+height:100%;
+margin-top: 10px;
+border-right: 2px solid black;
+padding: 30px 0 0 10px;
+}
+img{
+display:block;
+height:300px;
+width:300px;
+margin:70px auto 0px auto;
+}
+#contacts {
+  display:block;
+  width:100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top:3px;
+  margin-bottom: 5px;
+}
+#contacts a {
+  text-decoration: none;
+}
+#contacts a:hover {
+  font-weight: bold;
+  color:#2E4DE4;
+}
+h3 {
+  text-transform: uppercase;
+  margin:0px 5% 10px 5%;
+  border-bottom: 2px solid black;
+  display:block;
+}
+#About {
+  text-decoration: none;
+  margin:0px 5% 10px 5%;
+}
+#About a:hover {
+  text-decoration:none;
+  font-weight: bold;
+  color:#2E4DE4;
+}
+article {
+  margin:0px 40px 0px 40px;
+}
+footer {
+  text-align: center;
+  margin:10px auto 10px auto;
+  color:gray;
+}
+footer span {
+  font-weight: bold;
+  color:gray;
+}
