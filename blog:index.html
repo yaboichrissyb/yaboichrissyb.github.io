@@ -15,12 +15,33 @@
   <div id="left">
      <p>Blog Archive</p>
      <ul>
+      <li><a href="http://yaboichrissyb.github.io/blog/enumerable-methods.html">Jan. 11</a></li>
       <li><a href="http://yaboichrissyb.github.io/blog/arrays-hashes.html">Jan. 3</a></li>
       <li><a href="http://yaboichrissyb.github.io/blog/css-concepts.html">Dec. 20</a></li>
       <li><a href="http://yaboichrissyb.github.io/blog/git.html">Dec. 4</a></li>
       </ul>
   </div>
   <div id="content">
+    <article>
+      <h2><b>Week 5: Enumerable Methods: Map</b></h2>
+      <h5>Jan. 11, 2016</h5>
+      <p><a href = "http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-map">Ruby-docs</a>: <i>returns a new array with the results of running a block once for every element in enum.  If no block is given, an enumerator is returned instead.</i>
+<center><code>(1..4).map { |i| i * i }
+  => [1, 4, 9, 16]</code></center>
+<p> The map method, also known as collect, works through an array one time at a time, calling the code block once for each item and crating a new array consisting of the results of all ethis calls to the block.   Mapping a [5,10,20] array through a block that multiplies each item by 10 results in a new array [50,100, 200]. For example: </p>
+<center><code>array = [5, 10, 20]
+array.map { |x| x * 10 }
+ =>[0] 50,
+   [1] 100,
+   [2] 200 </code></center>
+<p>Like each, which map is based off, map walks through an array one element at a time and yields each element to the code block.  The difference between each and map lies in the return value: each returns its receiver (input) but map returns a new array.</p>
+<center><code>array.each { |x| x * 10 }
+  =>[0] 5,
+    [1] 10,
+    [2] 20</code></center>
+<p>The new array is always the same size as the original array, but instead of the original elements, the new array contains accumulated return values of the code block from the iterations.</p>
+<p>The mapping results in a new array, each of whose elements corresponds to the element in the same position in the original array but processed through the code block.  What map adds to our analysis of iteration is the idea of the code block returning a value to the method that yielded to it.  And indeed it does: just as the method can yield a value, so too can the block return a value.  The return value comes back as the value of the call to yield.</p>
+<p>So, each is used for processing an array and map is used to do something with a processed array.  When using each, you need to explicitly return a return value, while map implicitly returns the return of the block.  If you want to change your return value, use map.  If you want to keep the initial input values, use each with the option to explicitly return the return of the block if needed.  In this sense, each is maybe more flexible but mapi smore immediately useful.</p></article>
 <article>
   <h2><b>Week 4: Arrays and Hashes</b></h2>
       <h5>Jan. 3, 2016</h5>
