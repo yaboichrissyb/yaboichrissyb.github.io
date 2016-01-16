@@ -15,6 +15,7 @@
   <div id="left">
      <p>Blog Archive</p>
      <ul>
+      <li><a href="http://yaboichrissyb.github.io/blog/ruby-classes.html">Jan. 16</a>
       <li><a href="http://yaboichrissyb.github.io/blog/enumerable-methods.html">Jan. 11</a></li>
       <li><a href="http://yaboichrissyb.github.io/blog/arrays-hashes.html">Jan. 3</a></li>
       <li><a href="http://yaboichrissyb.github.io/blog/css-concepts.html">Dec. 20</a></li>
@@ -23,7 +24,58 @@
   </div>
   <div id="content">
     <article>
-      <h2><b>Week 5: Enumerable Methods: Map</b></h2>
+      <h2><b>Week 6: Ruby Classes</b></h2>
+      <h5>Jan. 16, 2016</h5>
+      <p> So far, you may have heard Ruby discussed as an object-oriented programming language.  But, what does this really mean?  Well, what Ruby does and what you've probably been doing so far, is take objects - whether they're strings, fixnums, arrays, hashes, etc. - and perform some sort of transformation with them using Ruby's vast library of methods.  Each of these types or categories of objects are called a class, and they each come with their own unique variables as well as methods that can be performed upon them.</p>
+      <p>You can think of an object's variables as things it knows about itself, and, the types of methods that can be called on the object depend in part on the types of information it knows about itself.  For examples, as you probably know, you can't check the remainder of one string divided by another, and you can't capitalize an integer or float.  There are certain things (methods) that can be done to objects of class String that cannot be done to objects of class Fixnum.
+      <p>So, this is pretty useful stuff to know for performing math operations and  sorting/manipulating other types of data; generally making good use of Ruby's built in classes and methods.  But, while Ruby has a pretty expansive library of these built in features, wouldn't it be cool if you could come up with your own?</p>
+      <p>Obviously, even just this far into your programming work, you're probably well aware that Ruby seems to keep the programmer in mind at every turn.  Whether this is done by implementing semantic methods and intuitive syntax, or by including multiple ways to do the same thing.  And now, you'll see that Ruby has made it really pretty easy for you to create your own class.  And, not just that, but def variables and methods for your class that are easily callable for each instance class instance.  Let's look at how this is done with an example:</p>
+
+     <pre><code>class Dog
+              def initialize(name, breed, age)
+                @name = name
+                @breed = breed
+                @age = age
+              end</code></pre>
+      <p>Ok, so this code just above is the bare bones of class definition in ruby.  You denote that you are defining a new class by writing <code>class</code> followed by the class name starting with a capital letter.  In Ruby conventions, classes always begin with a capital letter.  In this case we're defining a class of object called Dog.  Each type you define a new instance of a Random, Array, Hash or other class in your own code, it's necessarry to capitalize the name of the class.</p>
+      <p>Then, right below that, we call the initialize method and pass three arguments: name, breed and age.  These arguments will become the instance variables of the class Dog.  Instance variables are what we were talking about earlier; the things an object knows about itself.  Now, this is maybe a little confusing since most dogs probably  know their name but not their age or breed.  But just think of it as things that you can attribute to this object.  We can give an instance of Dog a name, breed and age.</p>
+      <p>And, moving right along, just below that we have the instance variables defined.  You do this with an @ symbol followed by the name of the variable.  Each time you refer to the instance variable later on in the methods, you will want to do so by referring to the instance variable.  Instance variables are defined across multiple instances of each class object.  Every you create an instance of class Dog, you will need to define its name, age, and breed.  Otherwise, you can go back into the code and define a default value for each.  This makes more sense for other classes though and not so much for dogs.  Dogs don't really have default names, ages, or breeds.  Let's look at the next part:</p>
+
+  <pre><code>attr_reader :name
+attr_reader :breed
+attr_accessor :age</code></pre>
+
+      <p>These three lines of code are super handy shorthand ways of defining three new methods for class dog.  We have two examples of the attr_reader method and one of the attr_accessor method.  We also have a third one available to us called attr_writer, which I've chosen not to use.  What these three lines do is quickly define methods that allow us to call each instance variable and return its current value.  You can skip down to the driver code and get an example with age.  The attr_accessor method allows us to both return the current age and redefine the age if the dog gets older.  The attr_writer method only allows you to change the instance variable value, it does not allow you to return the current value.  In this way, attr_accessor is sort of a combination between the reader and writer methods.  But, it doesn't always make since to def the accessor method for all variables.  Some variables, like name and breed, are unlikely to change for a given object.  Furthermore, you don't always want to make your variables changeable.  This can make troubleshooting and debugging more challenging in that it allows you to easily make mistakes.</p>
+              <pre><code>def speak
+                speak_array = ["ruff!", "woof!", "arf! arf!", "awhooOoo!", "grrrrrr!", "Hello, human"]
+                speak_array.sample
+              end
+
+              def sit
+                puts "#{name}, sit!"
+                sleep 2
+                puts "*#{name} sits!*"
+                sleep 2
+                puts "Good dog!"
+              end
+            end</code></pre>
+      <p>Just above, we defined two new methods for class dog.  Just as instance variables are things each instance of the class knows about itself, you can think of methods as actions each instance knows how to do.  Every time we create a new instance of class dog, it will come with the built-in capability to speak and sit.  Often times, these methods call upon information stored in the instance variables, as the <code>sit</code> does for the @name instance variable.  All instance methods must be stored within the class definition.</p>
+
+<pre><code>#Driver Code
+kodi = Dog.new("Kodi", "Terrier", 12)
+p kodi.speak
+p kodi.breed
+p kodi.age = 13</code></pre>
+
+      <p>Lastly, we have our driver code.  This is outside the class definition and allows us to test our new class.  Entering the code above would create a new instance of class Dog named Kodi, who's a terrier and is 12 years old.  We then call the speak method.  Entering the driver code above yields the following output:</p>
+      <pre><code>"woof!"
+"Terrier"
+13</code></pre>
+
+      <p>Notice that when we called the breed method, it only outputs the name of the breed.  But, when we call the age method, this allows us to change the age of our pup Kodi.  The difference is taht breed was defined with the attr_reader and age was defined with the attr_accessor method.</p>
+      <p>So, now that you know how to create a class in Ruby, go out and define your own!</p>
+      </article>
+      <article><h2><b>Week 5: Enumerable Methods: Map</b></h2>
       <h5>Jan. 11, 2016</h5>
       <p><a href = "http://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-map">Ruby-docs</a>: <i>returns a new array with the results of running a block once for every element in enum.  If no block is given, an enumerator is returned instead.</i>
 <center><code>(1..4).map { |i| i * i }
@@ -99,10 +151,7 @@ array.map { |x| x * 10 }
         => 300
       </pre>
       With both arrays and hashes, various methods can be called to manipulate the data within the structure.  You can sort the data variously, add to it, delete from it, index only certain parts to be transformed with methods, turn numbers to strings and vice versa, etc.  The limits of what can be done are only the limits of your creativity.
-
-=======
->>>>>>> e153834b5bfd310884872c573a2c37518a26e042
-       <h2><b>Week 3: Positioning Elements in CSS</b></h2>
+       <article><h2><b>Week 3: Positioning Elements in CSS</b></h2>
       <h5>Dec. 20, 2015</h5>
       <p>Trying to successfully position HTML elements with CSS was consistently the most frustrating task of this past week's DBC workload.  Therefore, I thought I'd take the opportunity in my technical blog to do some further research and, more importantly, deeper thinking to try to wrap my head around the position property and how exactly to make it work for me rather than against me.  First off, let's flesh out some basic definitions so we're all on the same page.</p>
       <p>CSS is used for styling, formatting and positioning various HTML elements on a web page.  CSS takes the content from HTML and manipulates it or, from another viewpoint, adds a further layer of information for the browser to interpret.  The level at which CSS works is the HTML element, which CSS selects using selectors, that are then in turn manipulated using properties and their array of values.</p>
@@ -121,12 +170,7 @@ array.map { |x| x * 10 }
 
       <p> So, while reading about this sort of stuff can be useful if you've already had the frustrating experience of trying to figure out how best to use these four positioning properties, sometimes the best way to become more familiar with them is to practice and see them work first-hand.  I've found it useful to go back and review the content from our 3.4 pairing session to get more practice positioning blocks.  I also found <a href ="http://www.barelyfitz.com/screencast/html-training/css/positioning/">this</a> tutorial very helpful.</p>
     </article>
-<<<<<<< HEAD
-
-=======
->>>>>>> e153834b5bfd310884872c573a2c37518a26e042
-    <article>
-      <h2><b>Week 1: The Command Line and Version Control</b></h2>
+    <article><h2><b>Week 1: The Command Line and Version Control</b></h2>
       <h5>Dec. 4, 2015</h5>
       <h4>The Benefits of Version Control</h4>
       <p>Version Control is the name given to a group of tools that allow developers (and non-developers, poets, writers, etc.) to track the progress of their work and create backups.  The specific tool we have and will be using in DBC is called git.  Git is a local piece of software that sits on your computer and works in conjunction with your command line.  In order to use it, simply type "git ..." followed by a variety of commands.  Another tool that then works in conjunction with git (which is working in conjunction with your home terminal) is called GitHub.  GitHub is used as a remote component to the local git software and allows users to upload, store, and share their version control output.  GitHub also functions as a significant part of the open-source community.</p>
