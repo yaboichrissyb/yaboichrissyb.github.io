@@ -56,8 +56,12 @@ font-weight: bold;
 color:#2E4DE4;
 }
 #content {
-  margin: 15px 10px 0 135px;
+  margin: 15px 20% 5px 20%;
   white-space: pre-line;
+}
+article {
+  border-bottom: 2px solid black;
+  padding-bottom: 15px;
 }
 footer {
   text-align: center;
@@ -67,4 +71,15 @@ footer {
 footer span {
   font-weight: bold;
   color:gray;
+}
+pre {
+  display: block;
+  background-color:#e6e6e6;
+  clear:both;
+  width: auto;
+  padding: 0 10px 0 10px;
+  min-width: 150px;
+  margin: 0 auto 0 auto;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 12px;
 }

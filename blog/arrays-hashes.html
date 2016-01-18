@@ -28,27 +28,21 @@
       <h2><b>Week 4: Arrays and Hashes</b></h2>
       <h5>Jan. 3, 2016</h5>
       <p>Arrays and hashes are popular data structures used in Ruby, as well as C and Java, for storing all types of data.  You can use arrays, often in conjunction with hashes, to build and use complex data structures without having to define custom classes.</p>
-
       <h4>Arrays</h4>
-      <p>From Ruby-Docs:
-
-        <pre>Arrays are ordered, integer-indexed collections of any object. Array indexing starts at 0, as in C or Java. A negative index is assumed to be relative to the end of the array—that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on</pre>
-
-      So, more basically, an array is a list of objects - strings, fixnums, floats, integers, other arrays, methods, etc. - that is stored and indexed for reference throughout the code.  What Ruby-Docs means by saying that an array is "integer-indexed" is that each object in the list can be referenced only with an integer.  For example, if you have an array called my_array and you wanted to access the first object, you would call my_array[0].  For the second object, you'd use my_array[1], and so on.
-      </p>
+      <p><a href= "http://ruby-doc.org/core-2.2.0/Array.html">Ruby-Docs</a>: Arrays are ordered, integer-indexed collections of any object. Array indexing starts at 0, as in C or Java. A negative index is assumed to be relative to the end of the array—that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on</p>
+     <p> So, more basically, an array is a list of objects - strings, fixnums, floats, integers, other arrays, methods, etc. - that is stored and indexed for reference throughout the code.  What Ruby-Docs means by saying that an array is "integer-indexed" is that each object in the list can be referenced only with an integer.  For example, if you have an array called my_array and you wanted to access the first object, you would call my_array[0].  For the second object, you'd use my_array[1], and so on.</p>
       <h4>Hashes</h4>
-      <p>From Ruby-Docs:
-
-        <pre>A Hash is a collection of key-value pairs.  It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.  Hashes enumerate their valies in the order that the corresponding keys were insterted.</pre>
-
-      This definition is more self-explanatory.  Both arrays and hashes are data-indexing structures but the method in which they index the data is different.  Arrays only use numbers, starting from 0, while hashes allow the programmer to define arbitrary keys with which to call the value at any point in the code.  Like arrays, hashes can store all types of objects, from strings and integers to other arrays, methods and floats.</p>
+      <p><a href="http://docs.ruby-lang.org/en/2.0.0/Hash.html">Ruby-Docs</a>: A Hash is a collection of key-value pairs.  It is similar to an Array, except that indexing is done via arbitrary keys of any object type, not an integer index.  Hashes enumerate their valies in the order that the corresponding keys were insterted.</p>
+      <p>This definition is more self-explanatory.  Both arrays and hashes are data-indexing structures but the method in which they index the data is different.  Arrays only use numbers, starting from 0, while hashes allow the programmer to define arbitrary keys with which to call the value at any point in the code.  Like arrays, hashes can store all types of objects, from strings and integers to other arrays, methods and floats.</p>
       <h4>One more time: What's the difference?</h4>
       <p>With arrays, you absolutely have to use numbers to 'index' into the array, meaning you always use numbers, starting at 0, to find out what's in the array.  Hashes, on the other hand, let you use anything, not just numbers, as your index.  Each of the two data structures associate one thing to another, they just do it in diferent ways.  Arrays automatically link integers with the objects entered into the array, according to the order in which they are entered.  This is sometimes described as giving the objects in the array "implied keys".  Hashes give the programmer the freedom to define their own index keys.  The reasons why this might be useful will (hopefully) become more apparent as we begin to look at some examples.</p>
       <h4>Example: Alphabet Array</h4>
       <p>Let's say you want to create a data structure that has every letter in the alphabet.  You'd probably want to use an array for this.  Since you only have one type of variable in the list, you can take advantage of the implied array key.  This array could be useful, I can't think of a reason why, at the moment, but I'm sure there's a use for it.  You can define it simply, as follows:
-        <pre>
+        <pre><code>
           >> Alphabet = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
+
           #Then you can access any letter:
+
           >> Alphabet[0]
           => a
           >> Alphabet[7]
@@ -57,11 +51,10 @@
           => z
           >> Alphabet[100]
           => nil
-        </pre>
+        </code></pre>
      <h4>Example: Favorite Things Hash</h4>
      <p> Now, let's say you want to create a hash that has different categories of objects and then a user's favorite of that category.  You could define that hash as follows:
-
-      <pre>
+      <pre><code>
         favorite_things = {
         'food' => 'Avocado',
         'sport' => 'curling',
@@ -70,16 +63,16 @@
         'composer' => 'John Philip Sousa',
         'age' => 300
         }
+
         #Now, to call any object in the hash, use the key
-        # you've defined:
+        #you've defined:
+
         >> favorite_things[:city]
         => 'Juno, Alaska'
         >> favorite_things[:age]
         => 300
-      </pre>
-
-      With both arrays and hashes, various methods can be called to manipulate the data within the structure.  You can sort the data variously, add to it, delete from it, index only certain parts to be transformed with methods, turn numbers to strings and vice versa, etc.  The limits of what can be done are only the limits of your creativity.
-      </article>
+      </pre></code>
+      <p>With both arrays and hashes, various methods can be called to manipulate the data within the structure.  You can sort the data variously, add to it, delete from it, index only certain parts to be transformed with methods, turn numbers to strings and vice versa, etc.  The limits of what can be done are only the limits of your creativity.</p></article>
     </div>
     <footer>Site created by <span>Chris Bunkers</span> - &COPY 2015</footer>
   </body>

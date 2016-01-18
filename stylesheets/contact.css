@@ -48,47 +48,9 @@ margin-top: 10px;
 border-right: 2px solid black;
 padding: 30px 0 0 10px;
 }
-img{
-display:block;
-height:300px;
-width:300px;
-margin:70px auto 0px auto;
-}
-#contacts {
-  display:block;
-  width:100%;
-  text-align: center;
-  text-transform: uppercase;
-  margin-top:3px;
-  margin-bottom: 5px;
-}
-#contacts a {
-  text-decoration: none;
-}
-#contacts a:hover {
-  font-weight: bold;
-  color:#2E4DE4;
-}
-h3 {
-  text-transform: uppercase;
-  margin:0px 5% 10px 5%;
-  border-bottom: 2px solid black;
-  display:block;
-}
-#About {
-  display: inline-block;
-  text-decoration: none;
-  margin:0px 5% 10px 5%;
-}
-#About a:hover {
-  text-decoration:none;
-  font-weight: bold;
-  color:#2E4DE4;
-}
-article {
-  margin:auto;
-  background-color:#e6e6e6;
-  padding: 5px 40px 5px 40px;
+
+form {
+  margin:10% 40% 40% 40%;
 }
 footer {
   text-align: center;
