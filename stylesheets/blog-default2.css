@@ -13,6 +13,7 @@ header {
   display:block;
   font-size: 20px;
   text-transform: uppercase;
+  max-height: 24px;
 }
 header a {
   text-decoration: none;
@@ -26,7 +27,7 @@ header a:hover {
 }
 #Name {
   float:right;
-  margin:0px 25px 0px auto;
+  margin:0px 25px 0px 5px;
   font-size:20px;
   color:#2E4DE4;
 }
@@ -39,7 +40,7 @@ header a:hover {
    color:black;
    }
 #left {
-background-color:#e6e6e6;
+  background-image: url("http://s10.postimg.org/h5szep7xl/Square.jpg");
 float:left;
 position:fixed;
 width:100px;
@@ -50,18 +51,21 @@ padding: 30px 0 0 10px;
 }
 #left a {
   text-decoration: none;
+  font-weight: 900;
 }
 #left a:hover {
-font-weight: bold;
-color:#2E4DE4;
+font-weight: 900;
+color:White;
 }
 #content {
-  margin: 15px 20% 5px 20%;
+  margin: 15px 10% 5px 20%;
   white-space: pre-line;
 }
 article {
   border-bottom: 2px solid black;
   padding-bottom: 15px;
+  min-width: 400px;
+
 }
 footer {
   text-align: center;
