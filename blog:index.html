@@ -15,6 +15,7 @@
   <div id="left">
      <p>Blog Archive</p>
      <ul>
+       <li><a href="http://yaboichrissyb.github.io/blog/Javascript">Jan. 24</a>
       <li><a href="http://yaboichrissyb.github.io/blog/ruby-classes.html">Jan. 16</a>
       <li><a href="http://yaboichrissyb.github.io/blog/enumerable-methods.html">Jan. 11</a></li>
       <li><a href="http://yaboichrissyb.github.io/blog/arrays-hashes.html">Jan. 3</a></li>
@@ -24,7 +25,40 @@
   </div>
   <div id="content">
     <article>
-      <h2><b>Week 6: Ruby Classes</b></h2>
+      <h2><b>Week 7: Ruby Classes vs. JavaScript Constructor Functions</b></h2>
+      <h5>Jan. 24, 2016</h5>
+      <p>After a couple weeks focused on Ruby, this week was all about Javascript.  So far, the two languages seem pretty similar.  They're both object-oriented and give the programmer a lot of the same abilities and constraints.  Right off the bat, the major differences between the two seem to be about syntax and user-friendliness.  Ruby was a language made with the developer in mind, where JavaScript, while not entirely unapproachable, has less of the 'syntactic sugar' that's helped make Ruby such a popular first language to learn.</p>
+      <p>But, in general, I've actually really liked working in JavaScript.  It's been interesting learning about some of the same concepts in a different language; how each language handles them and what are the advantages to each approach. One of the obvious parallels we came up against this week is how each language handles object creation and method definition.  Initially, I did think they were basically the same, with only some syntactic differences, but after some more exposure and research, there are a few key differences to keep in mind.</p>
+      <p>First, let's review how you create a class in Ruby:</p>
+  <pre><code>class Dog
+    def initialize(name, breed, age)
+      @name = name
+      @breed = breed
+      @age = age
+      end
+      end</code></pre>
+      <p>So, just above, we've again created class Dog and given it three properties: name, breed, and age.  We can create the same sort of object in JavaScript, which calls them prototypes, using the following constructor function:</p>
+      <pre><code>function Dog(name, breed, age){
+        this.name - name,
+        this.breed = breed,
+        this.age = age
+      }</code></pre>
+      <p> Instead of instance variables(@name, @breed, @age), in JS we call the variables assigned to instances of the  Dog object 'properties'.  The 'this' refers to the current object.  Now, in Ruby, to create a new instance of class Dog, we'd execute the following:</p>
+      <pre><code>Kodi = Dog.new("Kodi", "Terrier", 12)</code></pre>
+      <p>and in Javascript, much the same:</p>
+      <pre><code>Kodi = new Dog("Kodi", "Terrier", 12)</code></pre>
+      <p>Now, let's talk about method creation.  In Ruby, you give a class of objects a new method within the class definition itself like so:</p>
+      <pre><code>def speak
+        puts "woof"
+        end
+        end</code></pre>
+        <p> In JS, this giving an object a new ability is done quite differently.  You can create a function, which is essentially a method or at least serves the same purpose, that is available to all of the Dog objects in your program.  However, it cannot be done within the constructor function and is not defined in the same way as a Ruby method.  In JS, you achieve this similar ability by using a prototype function that is available to all objects of that same type, created with the constructor function.  It's done like so:</p>
+        <pre><code>Dog.prototype.speak = function() {
+          console.log("woof");
+        }
+      </code></pre>
+      <p><a href="http://nishacodes.tumblr.com/post/74145415546/javascript-vs-ruby-object-oriented-programming">Here</a> is a pretty good and simple resource for illustrating the differences between Ruby classes and JS constructor functions.  And <a href="http://raganwald.com/2013/02/10/prototypes.html">Here</a> is another good one that goes a bit more in depth.</p></article>
+    <article><h2><b>Week 6: Ruby Classes</b></h2>
       <h5>Jan. 16, 2016</h5>
       <p> So far, you may have heard Ruby discussed as an object-oriented programming language.  But, what does this really mean?  Well, what Ruby does and what you've probably been doing so far, is take objects - whether they're strings, fixnums, arrays, hashes, etc. - and perform some sort of transformation with them using Ruby's vast library of methods.  Each of these types or categories of objects are called a class, and they each come with their own unique variables as well as methods that can be performed upon them.</p>
       <p>You can think of an object's variables as things it knows about itself, and, the types of methods that can be called on the object depend in part on the types of information it knows about itself.  For examples, as you probably know, you can't check the remainder of one string divided by another, and you can't capitalize an integer or float.  There are certain things (methods) that can be done to objects of class String that cannot be done to objects of class Fixnum.
