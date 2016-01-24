@@ -44,73 +44,32 @@ header > a + a + a:hover {
 #B {
    font-weight: bold;
    color:black;
-   }
-#left {
-/*background-color:#e6e6e6;*/
-float:left;
-position:fixed;
-width:12%;
-height:100%;
-margin-top: 10px;
-border-right: 2px solid black;
-padding: 30px 0 0 10px;
+ }
+img {
+  margin: -227px 0 -21px 0 ;
 }
-#background {
-  background-image: url("http://s12.postimg.org/4k5eaadil/Square.jpg");
-  border-bottom: 2px solid black;
-
-}
-#contacts img{
-display:inline-block;
-height:300px;
-width:300px;
-margin:70px 35% auto 35%;
-border: 2px solid black;
-
-}
-#contacts {
-  display:inline-block;
-  width:100%;
-  text-align: center;
-  text-transform: uppercase;
-  /*margin-top:3px;
-  margin-bottom: 5px;*/
-}
-#contacts a {
-  text-decoration: none;
-  color:black;
-  font-size: 1.25em;
-}
-#contacts a:hover {
-  font-weight: bold;
-  color:white;
-}
-#background h3 {
+h3{
+  background-color: white;
   font-weight: 600;
   font-style: bold;
-  margin:0px 5% 0px 5%;
-/*  border-bottom: 2px solid black;
-*/ /* border-bottom-width: 100%;*/
-  display:block;
-}
-#About {
-  display: inline-block;
-  text-decoration: none;
-  margin:10px 5% 10px 5%;
-}
-#About a:hover {
-  text-decoration:none;
   font-weight: bold;
-  color:#2E4DE4;
+  padding:20px 10% 5px 10%;
+  display:block;
+  border-top: 3px solid black;
+
 }
 article {
-  margin:auto;
   background-color:#e6e6e6;
   padding: 5px 40px 5px 40px;
+  width: auto;
+  float: left;
+  margin: 0 10% 0 10%;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
 }
 footer {
   text-align: center;
-  margin:10px auto 10px auto;
+  margin:20px auto 10px auto;
   color:gray;
 }
 footer span {
