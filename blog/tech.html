@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type ="text/css" href="../stylesheets/blog-default2.css">
+    <meta charset="utf-8">
+      <title>Chris Bunkers</title>
+  </head>
+  <body>
+    <header>
+      <a href="http://yaboichrissyb.github.io/">About</a>
+      <a href="https://www.google.com/?gws_rd=ssl">Projects</a>
+      <a href="hhttps://github.com/yaboichrissyb/yaboichrissyb.github.io.git">Blog</a>
+      <span id="Name"><span id="C">C</span>hris <span id="B">B</span>unkers</span>
+    </header>
+  <div id="left">
+     <p>Blog Archive</p>
+     <ul>
+      <li><a href="http://yaboichrissyb.github.io/blog/tech.html">Jan. 27</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/Javascript.html">Jan. 24</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/ruby-classes.html">Jan. 16</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/enumerable-methods.html">Jan. 11</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/arrays-hashes.html">Jan. 3</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/css-concepts.html">Dec. 20</a></li>
+      <li><a href="http://yaboichrissyb.github.io/blog/git.html">Dec. 4</a></li>
+      </ul>
+  </div>
+
+  <div id="content">
+    <article>
+      <h2><b>Week 8: WTF is Rails?/b></h2>
+      <h5>Jan. 27, 2016</h5>
+      <p> We've all (hopefully, proably) at least heard reference to Rails or Ruby on Rails by now.  But, none of our DBC coursework as of yet, to my knowledge, has explicitly fleshed out exactly what it is.  Obviously, it has some connection to this Ruby language we've all been spending so much time learning, but what exactly is the connection.  And we may have heard some vage rumblings that Rails is a framework for web application development, but again, wtf does that mean?  Why are we going to spend a bug chunk of the next three months learning about Rails?  What can it do?  Why should we use Rails instead of PHP or something more conventional?  What makes rails the cool-kids developer framework?  These are all questions I'll try to address in this post, but obviously, as if this needed stating, this will be a super duper brief overview of what I'm sure will prove to be a deeply rich, intricate and rewarding tool for those who spend the time to get to know it.</p>
+      <p>  First, let's cover the generalities:  What is Ruby on Rails?  Rails is a model-view-controller (MVC) framework for building web-based applications.  It provides default structures for a database, a web service, and web pages.  It uses Ruby alongside web-development standards like JSON and XML for data transfer, and HTML, CSS and JavaScript for display and user interfacing.  So, this is why we've been learning these other three languages alongside Ruby.  We'll eventually be using the four of them together to create some cool stuff on Rails.</p>
+      <p>  An MVC is a software architectual pattern used most commonly for implementing user interfaces.  Think of it as a gneral structural concept for how to build software applications.  It divides a given app into three interconnected parts so as to separate the hidden internal representations of information from the ways that information is presented to or accepted by the user.  An MVC framework breas a piece of software down into three key components:</p>
+      <ol>
+        <li>Model: This is generally a ruby class and is the central component of the framework.  It directly manages the data, logic and ruls of the application.  It talks with databases, validates data, etc.</li>
+        <li>View: This can be any output representation of information, such as a chart or diagram.  Multiple views of the same information are possible.  The view renders data from the model and handles the presentation of data that the user sees and interacts with.</li>
+        <li>Controller: The controller accepts input and converts it to commands for either the model or view.  Controllers sit between the model and view, accepting the raw data, and controlling the flow of the application.  They handle requests and initiate changes to the model, along with various other taks.</li>
+        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/200px-MVC-Process.svg.png">
+        <p>In this model, the user uses the ontroller which then manipulates the model which updates the view which the user then sees.  It's cyclical and interconnected.  This is one of the more complex concepts related to Rails but would be worth further reading since it's widely applicable to development theory outside of the context of just Rails.  The <a href = "https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Wikipedia</a> is a worthwhile read, as is <a href = "http://www.w3schools.com/aspnet/mvc_intro.asp">this</a> w3schools page.<p>
+        <p>So, in its most basic sense, Ruby on Rails is a framework for building web-based apps.  The framework follows the MVC model.  More unique to Rails thoush, as opposed to other MVCs, is that it includes essential and simple tools that make common development tasks easier "out-of-the-box".  Rails then is a collection of tools combined with a framework that create a basic but ever-evolving web-development environment.  It is technically a package library in the form of a ruby gem installed using the command-line interface.  Because it runs on a web server, Rails is considered a server-side, or back-end, web application development platform.</p>
+        <p>Rails is popular amongst web startups primarily because its pool of open source gems make it possible to build complex and effective sites quickly.  Some examples of sites built on rails are, most notably, Twitter, but also airbnb, youtube, groupon, github, shopify, hulu, zendesk and soundcloud.  While there are many ways to accomplish the same taks in Ruby, as I'm sure you've all seen, Railes champions the philosophy that there IS in fact a best way to accomplish many of the tasks involved in web-based application development.  The benefit to this philosophy is that every developer who learns the conventions of Rails produces a web application that any other rails developer can relatively easily unravel and understand more quickly than if they encountered idiosyncratic code without as many conventions, such as one might find from an application built using PHP or Perl.  The benefit to this, obviously, is easier, faster development and collaboration.<p>
+          <p>This idea of best-practices and conventions feeds into the interconnected principle philosophies that make Ruby unique.  Here is a brief overview of the most prominent ones:</p>
+          <ul>
+            <li>Rails is opinionated:  This means that, as stated above, Rails and its developers take the position that there is in fact a best way to accomplish certain tasks and solve many of the poblems that must be solved by a web application developer.  If you follow the conventions laid out by the Rails API, you'll have fewer decisions to make and you'll find what you need is more readily available.  In fact, it's likely been already built.</li>
+            <li>Rails is Omakase: This comes from a Japanese phrase that means "I'll leave it to you", originally used by patrons of sushi restaurants who allowed the chef to select dishes for them, rather than having to make uninformed and sometimes difficult decisions themselves.  It's important to understand that the "you" in this phrase is not in fact YOU, it's the team of developers who contribute to each new iteration of RoR.  This principle essentially says that this team of expert developers have picked out and arranged all the best forms of the  structures needed for building web-based applications.  We, as users of RoR, are leaving it to the experts to make certain decisions for us.  This is one of the more contentions principles of Rails, but most long-time users have not found significant problems with it and have actually found that the Rails community it especially open to user input.</li>
+            <li>Convention over Configuration: This is an extension of the "Rails is Opinionanted" principle stated above, essentially an extension itself of the concept of default, a setting or value automatically assigned without user intervention/input.  Instead of relying on extensive and often cumbersome guidance at each and every turn, Rails comes with certain default settings on its configuration files; files used to define settings for communication between and within files.  Rails makes certain assumptions, which for the most part, have proven to be agreeable for those who use it.  This means you'll be more productive.  Your computer won't constantly ask for answers to simple questions because it already has sensible answers.  This also makes it easier to collaborate because it defines certain conventions across users.</li>
+
+
+
+
+
+
+      </p>
+  <pre><code></code></pre>
+
+      </article>
+    </div>
+    <footer>Site created by <span>Chris Bunkers</span> - &COPY 2015</footer>
+  </body>
+</html>
