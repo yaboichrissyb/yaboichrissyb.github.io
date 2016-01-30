@@ -59,23 +59,20 @@ h3{
 
 }
 article {
+  margin: 15px 10% 5px 20%;
   background-color:#e6e6e6;
   padding: 5px 40px 5px 40px;
-  min-width: 70%;
+  width: auto;
   float: left;
-   margin: 15px 10% 5px 20%;
   border-top: 2px solid grey;
   border-bottom: 2px solid grey;
-
 }
-article a {
-  text-transform: none;
-
+article h4{
+  font-weight: bold;
 }
-article a:hover {
-font-weight: bold;
-text-decoration: none;
-
+article h5 {
+  font-weight: bold;
+  font-size: 1.1em;
 }
 footer {
   text-align: center;
