@@ -58,32 +58,24 @@ padding: 30px 0 0 10px;
 #background {
   background-image: url("http://s12.postimg.org/4k5eaadil/Square.jpg");
   border-bottom: 2px solid black;
+  width: 100%;
 }
-#contacts img{
+#image img{
 display:inline-block;
 height:300px;
 width:300px;
-margin:70px 35% auto 35%;
+margin:70px auto 15px auto;
+text-align: center;
 border: 2px solid black;
 
 }
-#contacts {
+#image {
   display:inline-block;
   width:100%;
   text-align: center;
   text-transform: uppercase;
-  /*margin-top:3px;
-  margin-bottom: 5px;*/
 }
-#contacts a {
-  text-decoration: none;
-  color:black;
-  font-size: 1.25em;
-}
-#contacts a:hover {
-  font-weight: bold;
-  color:white;
-}
+
 #background h3 {
   font-weight: 600;
   font-style: bold;
@@ -106,6 +98,9 @@ article {
   margin:auto;
   background-color:#e6e6e6;
   padding: 5px 40px 5px 40px;
+}
+#icons {
+  text-align: center;
 }
 footer {
   text-align: center;
